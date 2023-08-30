@@ -8,7 +8,19 @@ Additional tools that are going to be helpful for handling data are:
 - **KG Search**  
 - **KG QueryBuilder**  
 - **openMINDS**  
-- **ebrains-drive**  
+- **ebrains-drive**
+
+## Installation
+
+**KG Core Python SDK**
+```
+pip install ebrains-kg-core
+```
+
+**fairgraph**  
+```
+pip install fairgraph
+```
 
 ## Basic knowledge
 
