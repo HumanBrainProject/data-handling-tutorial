@@ -27,7 +27,7 @@ pip install fairgraph
 pip install ebrains_drive
 ```
 
-## Basic knowledge
+## Background knowledge
 
 The **EBRAINS Knowledge Graph** is a data management system with a graph database at it's core. A graph database is composed of nodes which store metadata in form of property-value pairs, and edges which define the relationship between nodes. Each node in a graph database receives a unique identifier and can be individually referenced. Data are typically described by the metadata of a multiple nodes and edges and different data can share the same nodes, building a searchable network.
 
