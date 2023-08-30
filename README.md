@@ -4,11 +4,11 @@ This repository holds a collection of code examples that demonstrate how to hand
 (1) **KG Core Python SDK**   
 (2) **fairgraph**  
 
-Additional tools that are going to be helpful for handling data are:  
+Additional tools that are going to be helpful for handling data are:   
 - **KG Search**  
-- **KG QueryBuilder**
-- **openMINDS**
-- **ebrains-drive**
+- **KG QueryBuilder**  
+- **openMINDS**  
+- **ebrains-drive**  
 
 ## Basic knowledge
 
