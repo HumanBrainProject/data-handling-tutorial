@@ -1,6 +1,6 @@
 # EBRAINS Data Handling
 
-This repository holds a collection of code examples that demonstrate how to handle data managed in the EBRAINS Knowledge Graph (KG) using:
+This repository holds a collection of code examples that demonstrate how to handle data managed in the EBRAINS Knowledge Graph (KG) using:  
 (1) **KG Core Python SDK**   
 (2) **fairgraph**  
 
