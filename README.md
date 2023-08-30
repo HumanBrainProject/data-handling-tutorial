@@ -1,2 +1,2 @@
-# EBRAINS Data Handling Tutorial
+# EBRAINS Data Handling
 
