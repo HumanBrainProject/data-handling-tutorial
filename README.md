@@ -4,6 +4,12 @@ This repository holds a collection of code examples that demonstrate how to hand
 (1) **KG Core Python SDK**   
 (2) **fairgraph**  
 
+Additional tools that are going to be helpful for handling data are:  
+- **KG Search**  
+- **KG QueryBuilder**
+- **openMINDS**
+- **ebrains-drive**
+
 ## Basic knowledge
 
 The **EBRAINS Knowledge Graph** is a data management system with a graph database at it's core. A graph database is composed of nodes which store metadata in form of property-value pairs, and edges which define the relationship between nodes. Each node in a graph database receives a unique identifier and can be individually referenced. Data are typically described by the metadata of a multiple nodes and edges and different data can share the same nodes, building a searchable network.
