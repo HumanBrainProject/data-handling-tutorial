@@ -3,7 +3,7 @@
 This repository holds a collection of code examples that demonstrate how to handle data managed in the EBRAINS Knowledge Graph (KG) using:  
 - **KG Core Python SDK**: https://github.com/HumanBrainProject/kg-core-sdks    
 - **fairgraph**: https://github.com/HumanBrainProject/fairgraph  
-- **ebrains-drive**: https://github.com/HumanBrainProject/ebrains-drive/  
+- **EBRAINS Drive**: https://github.com/HumanBrainProject/ebrains-drive/  
 
 Additional tools that are going to be helpful for handling EBRAINS data are:   
 - **KG Search**: https://search.kg.ebrains.eu/  
@@ -20,6 +20,11 @@ pip install ebrains-kg-core
 **fairgraph**  
 ```
 pip install fairgraph
+```
+
+**EBRAINS Drive**
+```
+pip install ebrains_drive
 ```
 
 ## Basic knowledge
