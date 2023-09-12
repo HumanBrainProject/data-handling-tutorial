@@ -2,9 +2,7 @@
 # example: Person instance
 
 import os
-import json
 from kg_core.kg import kg
-from kg_core.request import ExtendedResponseConfiguration, Pagination
 
 # initializing the KG client
 kg_client = kg().build()
