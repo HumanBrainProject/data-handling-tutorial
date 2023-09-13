@@ -32,7 +32,7 @@ openminds_prefix = "https://openminds.ebrains.eu/vocab/"
 # result objects are paginated; default pagination size is 50
 species = set()
 count = 0
-while result.has_next_page():
+while result:
     print(f"result page: {count} - {count + result.size} of {result.total}")
     count += result.size
     if result.data:
