@@ -4,7 +4,7 @@
 import os
 from kg_core.kg import kg
 
-# initializing the KG client
+# initializing the KG client (for more options, see "initializing_the_kg_client.py")
 kg_client = kg().build()
 
 # retrieving an instance using its universally unique identifier (uuid)
