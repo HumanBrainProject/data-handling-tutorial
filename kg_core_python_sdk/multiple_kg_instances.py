@@ -29,15 +29,35 @@ print()
 # predefine openminds_prefix
 openminds_prefix = "https://openminds.ebrains.eu/vocab/"
 
-# result objects are paginated; let's get all species
+# result objects are paginated; default pagination size is 50
 species = set()
+count = 0
 while result.has_next_page():
+    print(f"result page: {count} - {count + result.size} of {result.total}")
+    count += result.size
     if result.data:
         for i in result.data:
             if f"{openminds_prefix}species" in i:
                 species.add(i[f"{openminds_prefix}species"]["@id"])
     result = result.next_page()
-print("Number of retrieved species:", len(species))
+print()
 
-# retrieve simple species or strain label
-# TODO
+# the Subject property 'species' can be of type (simple) Species or Strain
+# a Strain instance again defines its (simple) Species type through the same property name
+# linked instances need to retrieve in a cascading manner
+species = list(species)
+simple_species = set()
+for s in species:
+    species_uuid = os.path.basename(s)
+    species_instance = kg_client.instances.get_by_id(species_uuid).data
+    species_type = os.path.basename(species_instance["@type"][0])
+    if species_type == "Species":
+        simple_species.add(species_instance[f"{openminds_prefix}name"])
+    elif species_type == "Strain":
+        species_uuid = os.path.basename(species_instance[f"{openminds_prefix}species"]["@id"])
+        simple_species_instance = kg_client.instances.get_by_id(species_uuid).data
+        simple_species.add(simple_species_instance[f"{openminds_prefix}name"])
+    else:
+        print("UNKNOWN SPECIES TYPE")
+
+print("Simple species names of Subjects registered in the KG:\n", "\n".join(sorted([f"\t{s}" for s in simple_species])))
