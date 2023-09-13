@@ -27,6 +27,14 @@ pip install fairgraph
 pip install ebrains_drive
 ```
 
+### Set up a venv
+We recommend to set up a venv as described [here](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment).
+
+For your convenience, you can install all the above packages by running
+```
+pip install -r requirements.txt
+```
+
 ## Background knowledge
 
 The **EBRAINS Knowledge Graph** is a data management system with a graph database at it's core. A graph database is composed of nodes which store metadata in form of property-value pairs, and edges which define the relationship between nodes. Each node in a graph database receives a unique identifier and can be individually referenced. Data are typically described by the metadata of a multiple nodes and edges and different data can share the same nodes, building a searchable network.
