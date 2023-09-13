@@ -30,11 +30,11 @@ for instance in instances_result.items():
 # end of the listing -> accordingly it is safe to use it for the termination condition of the while loop.
 
 # If you just want to check if a next page exists but don't want to load it, you can also use the "has_next_page" method
-instances = instances_result.data
-while instances:
-    for instance in instances:
+instances_result = kg_client.instances.list(type)
+while instances_result:
+    for instance in instances_result.data:
         print(instance)
-    instances = instances_result.next_page()
+    instances_result = instances_result.next_page()
 
 # Depending on the payload of the instances, it might be a good idea to adapt the page-size which defaults to 50
 # (to either minimize the memory footprint or the number of roundtrips).

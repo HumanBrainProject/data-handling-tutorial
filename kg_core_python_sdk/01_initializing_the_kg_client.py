@@ -49,4 +49,4 @@ kg_client_builder = kg().with_custom_token_provider(lambda: clb_oauth.get_token(
 kg_client = kg_client_builder.build()
 
 # In case you really would want to use the administration APIs of KG, you can do so by using (obviously your user-account will need to have the appropriate rights to do so)
-kg_client = kg_client_builder.build_admin()
+kg_admin_client = kg_client_builder.build_admin()

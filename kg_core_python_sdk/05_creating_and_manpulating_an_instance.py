@@ -1,13 +1,9 @@
 # manipulating an instance
 # example: Person instance
 
-import os
-import json
-import uuid
-from uuid import UUID
+from uuid import uuid4
 
 from kg_core.kg import kg
-from kg_core.request import ExtendedResponseConfiguration, Pagination
 
 # initializing the KG client (for more options, see "initializing_the_kg_client.py")
 kg_client = kg().build()
@@ -27,7 +23,8 @@ space = "myspace" # Instances in the KG live in so-called "spaces" for which you
 creation_result = kg_client.instances.create_new(person, space)
 
 # ... or you define it yourself. In the latter case, you're responsible to provide a unique identifier (UUID) - if duplicates are detected, the system will throw an error
-creation_result = kg_client.instances.create_new_with_id(person, UUID(), space)
+our_uuid = uuid4()
+creation_result = kg_client.instances.create_new_with_id(person, our_uuid, space)
 
 instance_id = creation_result.data.uuid # The response will contain the UUID of the instance (either assigned by the system or returning the UUID you have defined yourself)
 
