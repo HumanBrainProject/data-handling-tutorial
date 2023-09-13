@@ -60,6 +60,7 @@ for key, value in sorted(openminds_metadata.items()):
 # related information is constrained by linked schema types
 # the links between instances (nodes) are called edges
 # the edge to another instance is defined by the uuid of the linked instance
+# linked instances can be retrieved in a cascading manner
 for key, value in sorted(openminds_metadata.items()):
     if isinstance(value, dict) and "@id" in value:
         print(key)

@@ -43,8 +43,8 @@ while result.has_next_page():
 print()
 
 # the Subject property 'species' can be of type (simple) Species or Strain
-# a Strain instance again defines its (simple) Species type through the same property name
-# linked instances need to retrieve in a cascading manner
+# a Strain instance again defines its (simple) Species type (linked through property 'species')
+# linked instances can be retrieved in a cascading manner
 species = list(species)
 simple_species = set()
 for s in species:
